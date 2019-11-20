@@ -1,18 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import tweets from './tweets';
+import User from './User';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        tweets
+        <User />
       </div>
     );
   }
 }
 
-const element = document.getElementById('app');
+ReactDOM.render(<App />, document.getElementById('app'));
 
-ReactDOM.render(<App />, element );//
 
-console.log("tweet react");
+
+// class Tweet extends React.Component {
+//   render() {
+//         let allTweets = this.props.tweets.map (eachTweet =>
+//             <User identity={eachTweet.user}></User>
+//         )
+//         return (
+//             allTweets
+//     );
+//   }
+// }
+
+// class User extends React.Component {
+//     render () {
+//         let name = this.props.user.name
+//         let username = this.props.user.screen_name
+
+//         return (
+//             <div>
+//                 <p>{name}</p>
+//                 <p>@{username}</p>
+//             </div>
+//         )
+//     }
+// }
+
+// ReactDOM.render(
+//     <Tweet post={tweets} />, document.getElementById('app') );
